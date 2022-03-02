@@ -52,7 +52,9 @@ folded =  kf.*C(1)-kuf.*C(2)-sum(kArray(2,2:x-1));
 % Dimer    (2)
 dimer =    bArray(2,2)-sum(kArray(3,2:x-2));
 trimer =   bArray(2,3)-sum(kArray(4,2:x-3));
-tetramer = sum((bArray(2:3,4:-1:3))); % this term is not consistent with the terms above
+disp(trimer)
+tetramer = sum(sub2ind(size(bArray),2:3,4:-1:3)); % this term is constant at 30
+disp(tetramer)
 
 total = unfolded + folded + 2.*dimer+3.*trimer;
 
