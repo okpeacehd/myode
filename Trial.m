@@ -66,9 +66,9 @@ unfolded = -kf.*C(1)+kuf.*C(2);
 folded =  kf.*C(1)-kuf.*C(2)-sum(kArray(2,2:x-1));
 
 % Dimer    (2)
-dimer =    (C(2)^2).*k(1,1)-sum(kArray(3,2:x-2));
+dimer =    bArray(2,2)-sum(kArray(3,2:x-2));
 % Trimer   (3)
-trimer =   (C(2).*C(3)).*k(1,2)-sum(kArray(4,2:x-3));
+trimer =   bArray(2,3)-sum(kArray(4,2:x-3));
 % Tetramer (4)
 tetramer = sum((bArray(2:3,4:-1:3)))-sum(kArray(5,2:x-4));
 % pentamer (5)
